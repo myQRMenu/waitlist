@@ -142,8 +142,7 @@ function App() {
             <img
               src={phone}
               alt="Phone Mockup"
-              className="mx-auto object-contain object-top w-full h-[600px] md:h-[650px] translate-y-20 md:translate-y-32 scale-100 md:scale-125 transition-all duration-300"
-            />
+              className="mx-auto object-contain object-top w-full h-[600px] md:h-[650px] md:translate-y-20 scale-100 md:scale-110 transition-all duration-300" />
           </div>
         </section>
       </main>

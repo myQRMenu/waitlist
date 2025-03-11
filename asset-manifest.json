@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/myQRMenu/waitlist/static/css/main.f855e6bc.css",
+    "main.js": "/myQRMenu/waitlist/static/js/main.f206c476.js",
+    "static/js/453.cc55d24b.chunk.js": "/myQRMenu/waitlist/static/js/453.cc55d24b.chunk.js",
+    "index.html": "/myQRMenu/waitlist/index.html",
+    "main.f855e6bc.css.map": "/myQRMenu/waitlist/static/css/main.f855e6bc.css.map",
+    "main.f206c476.js.map": "/myQRMenu/waitlist/static/js/main.f206c476.js.map",
+    "453.cc55d24b.chunk.js.map": "/myQRMenu/waitlist/static/js/453.cc55d24b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.f206c476.js"
+  ]
+}

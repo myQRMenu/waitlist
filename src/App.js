@@ -1,5 +1,15 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+import logo from './assets/Logo.png';
+import bg from './assets/bg.png';
+import phone from './assets/phone.png';
+import phonewithbg from './assets/phonewithbg.png';
+import icon from './assets/icon.png';
+import icon2 from './assets/icon2.png';
+import icon4 from './assets/icon4.png';
+import icon6 from './assets/icon6.png';
+import icon7 from './assets/icon7.png';
+import icon8 from './assets/icon8.png';
 
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -15,7 +25,7 @@ function App() {
     <div className="bg-white overflow-x-hidden">
       <header className="bg-white shadow">
         <nav className="max-w-7xl mx-auto flex items-center px-6 py-4">
-          <img src="/assets/logo.png" alt="QR Menu" className="h-10" />
+          <img src={logo} alt="QR Menu" className="h-10" />
 
           <div className="hidden md:flex items-center space-x-8 justify-center flex-1">
             {menuItems.map((item) => (
@@ -110,7 +120,7 @@ function App() {
         <section
           className="bg-gray-900 text-center pt-20 md:pt-28 rounded-3xl shadow-lg overflow-hidden"
           style={{
-            backgroundImage: "url(/assets/bg.png)",
+            backgroundImage: `url(${bg})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
@@ -130,7 +140,7 @@ function App() {
 
           <div className="mt-12 relative max-w-3xl mx-auto px-4 h-[500px] overflow-hidden">
             <img
-              src="/assets/phone.png"
+              src={phone}
               alt="Phone Mockup"
               className="mx-auto object-contain object-top w-full h-[600px] md:h-[650px] translate-y-20 md:translate-y-32 scale-100 md:scale-125 transition-all duration-300"
             />
@@ -149,21 +159,21 @@ function App() {
             {/* Service Card */}
             {[
               {
-                icon: "icon.png",
+                icon: icon,
                 title: "Create and Upload Menu",
                 description:
                   "Easily create and upload your menu in just a few clicks! Add items, set prices, and update details effortlessly no technical skills needed.",
                 bgColor: "bg-yellow-100",
               },
               {
-                icon: "icon2.png",
+                icon: icon8,
                 title: "Update Menu",
                 description:
                   "Make real-time updates to your menu anytime, anywhere! Change prices, add new meals or archive unavailable meals instantly no reprints needed.",
                 bgColor: "bg-pink-100",
               },
               {
-                icon: "icon4.png",
+                icon: icon4,
                 title: "Generate and Share",
                 description:
                   "Generate a unique QR code for your menu instantly! Share it on tables, posters, or online, allowing customers to scan and access your latest menu with ease.",
@@ -174,7 +184,7 @@ function App() {
                 className="bg-white rounded-xl border border-gray-200 p-6">
                 <div className={`bg-pink-100 rounded-lg inline-block p-3 ${service.bgColor}`}>
                   <img
-                    src={`/assets/${service.icon}`}
+                    src={service.icon}
                     alt={service.title}
                     className="h-8 w-8"
                   />
@@ -201,15 +211,15 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
             <div className="space-y-8">
               {[
-                { title: "Manage Menu", icon: "icon.png", color: "bg-blue-100", description: "Manage your menu anytime! Add, edit, or remove items with ease keeping your offerings fresh and up to date for your customers." },
-                { title: "Insight & Reports", icon: "icon6.png", color: "bg-purple-100", description: "Gain valuable insights with real-time reports! Track menu views, QR code scans, and customer interactions for your restaurant." },
-                { title: "Share QR Codes", icon: "icon2.png", color: "bg-pink-100", description: "Share your menu with a unique QR code! Display it on tables, posters, or online, allowing customers to scan and access your latest menu instantly." },
-                { title: "Clients Reviews", icon: "icon7.png", color: "bg-yellow-100", description: "Showcase customer feedback with real reviews and ratings! Build trust, improve your menu, and enhance the dining experience with valuable insights." },
-                { title: "Offers & Discounts", icon: "icon8.png", color: "bg-green-100", description: "Boost sales with special offers and discounts! Highlight promotions, limited-time deals, and exclusive discounts to attract and retain more customers." },
+                { title: "Manage Menu", icon: icon, color: "bg-blue-100", description: "Manage your menu anytime! Add, edit, or remove items with ease keeping your offerings fresh and up to date for your customers." },
+                { title: "Insight & Reports", icon: icon6, color: "bg-purple-100", description: "Gain valuable insights with real-time reports! Track menu views, QR code scans, and customer interactions for your restaurant." },
+                { title: "Share QR Codes", icon: icon8, color: "bg-pink-100", description: "Share your menu with a unique QR code! Display it on tables, posters, or online, allowing customers to scan and access your latest menu instantly." },
+                { title: "Clients Reviews", icon: icon, color: "bg-yellow-100", description: "Showcase customer feedback with real reviews and ratings! Build trust, improve your menu, and enhance the dining experience with valuable insights." },
+                { title: "Offers & Discounts", icon: icon7, color: "bg-green-100", description: "Boost sales with special offers and discounts! Highlight promotions, limited-time deals, and exclusive discounts to attract and retain more customers." },
               ].map((feature) => (
                 <div key={feature.title} className="flex items-start space-x-4">
                   <div className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center ${feature.color}`}>
-                    <img src={`/assets/${feature.icon}`} alt={feature.title} className="h-6 w-6" />
+                    <img src={feature.icon} alt={feature.title} className="h-6 w-6" />
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-gray-800">
@@ -224,7 +234,7 @@ function App() {
             </div>
 
             <div className="bg-orange-500 rounded-2xl flex justify-center items-center overflow-hidden">
-              <img src="/assets/phonewithbg.png" alt="App Screenshot" className="max-w-full h-auto object-cover object-center" />
+              <img src={phonewithbg} alt="App Screenshot" className="max-w-full h-auto object-cover object-center" />
             </div>
           </div>
         </div>

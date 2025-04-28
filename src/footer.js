@@ -3,7 +3,7 @@ import logo from './assets/logo1.png';
 export default function FooterCTA() {
   return (
     <section className="bg-gray-900 text-white py-16">
-      <div className="max-w-4xl mx-auto flex flex-col items-center justify-center text-center px-4 md:px-0">
+      <div className="max-w-6xl mx-auto flex flex-col items-center justify-center text-center px-4 md:px-0">
         {/* Main Heading */}
         <h2 className="text-3xl md:text-4xl font-semibold leading-tight">
           Seamless Digital Menus, <br /> Simplified!
@@ -11,9 +11,14 @@ export default function FooterCTA() {
 
         {/* CTA Button */}
         <div className="mt-6">
-          <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-full transition shadow-md">
+          <a
+            href="https://form.typeform.com/to/fgpsBEja"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-full transition shadow-md inline-block text-center">
             Join Waitlist
-          </button>
+          </a>
+
         </div>
 
         {/* Logo */}

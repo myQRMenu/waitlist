@@ -4,6 +4,7 @@ export default function ContactUs() {
         const form = event.target
         const formData = new FormData(form);
     
+        formData.append("_subject", "New Waitlist Submission");
         formData.append("access_key", "7c5c63ef-55ac-44fe-90b9-5044d1d949c4");
         console.log(formData)
         const object = Object.fromEntries(formData);
@@ -20,6 +21,7 @@ export default function ContactUs() {
     
         if (res.success) {
           form.reset();
+          alert("Thank you! Your message has been sent successfully.");
         }
       };
 

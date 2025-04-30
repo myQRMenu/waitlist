@@ -50,9 +50,9 @@ function App() {
 
           <div className="hidden md:flex items-center space-x-8 justify-center flex-1">
             {menuItems.map((item) => (
-              <a
+              <label
                 key={item}
-                href={`#${item.toLowerCase().replace(" ", "")}`}
+                // href={`#${item.toLowerCase().replace(" ", "")}`}
                 onClick={() => setActiveLink(item)}
                 className={`font-medium transition ${activeLink === item
                   ? "text-orange-500"
@@ -60,7 +60,7 @@ function App() {
                   }`}
               >
                 {item}
-              </a>
+              </label>
             ))}
           </div>
 

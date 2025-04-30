@@ -347,6 +347,7 @@ function App() {
               allowFullScreen=""
               loading="lazy"
               className="rounded-xl"
+              title="demo"
             ></iframe>
           </div>
 
@@ -413,7 +414,7 @@ function App() {
                 />
                 <span className="text-sm text-gray-600">
                   You agree to our friendly{" "}
-                  <a href="#" className="text-orange-500 underline hover:text-orange-600">
+                  <a href="#privacypolicy" className="text-orange-500 underline hover:text-orange-600">
                     privacy policy
                   </a>
                 </span>

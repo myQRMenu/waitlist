@@ -116,9 +116,9 @@ function App() {
             </button>
 
             {menuItems.map((item) => (
-              <a
+              <label
                 key={item}
-                href={`#${item.toLowerCase().replace(" ", "")}`}
+                // href={`#${item.toLowerCase().replace(" ", "")}`}
                 onClick={() => {
                   setActiveLink(item);
                   setIsMobileMenuOpen(false);
@@ -127,7 +127,7 @@ function App() {
                   }`}
               >
                 {item}
-              </a>
+              </label>
             ))}
             <button
               className="bg-orange-500 px-6 py-3 rounded-full"
@@ -414,9 +414,9 @@ function App() {
                 />
                 <span className="text-sm text-gray-600">
                   You agree to our friendly{" "}
-                  <a href="#privacypolicy" className="text-orange-500 underline hover:text-orange-600">
+                  <label   className="text-orange-500 underline hover:text-orange-600">
                     privacy policy
-                  </a>
+                  </label>
                 </span>
               </div>
 

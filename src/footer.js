@@ -27,13 +27,13 @@ export default function FooterCTA() {
 
         {/* Bottom Links */}
         <div className="mt-12 w-full flex justify-between items-center text-gray-400 text-sm">
-          <a href="#" className="hover:text-white transition">
+          <label className="hover:text-white transition">
             Terms & Agreements
-          </a>
+          </label>
           <span>©2025 All rights reserved</span>
-          <a href="#" className="hover:text-white transition">
+          <label className="hover:text-white transition">
             Privacy Policy
-          </a>
+          </label>
         </div>
       </div>
     </section>

@@ -26,7 +26,7 @@ export default function ContactUs() {
       };
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section id="contact" className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-6 md:px-12">
           {/* Left Side - Map */}
           <div className="overflow-hidden rounded-xl shadow-lg">

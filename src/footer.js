@@ -31,13 +31,13 @@ export default function FooterCTA() {
             <a href="https://www.facebook.com/share/1Z7nz5uFmK/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
               <img src={facebookIcon} alt="Facebook" className="cursor-pointer" />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/company/my-qrmenu/" target="_blank" rel="noopener noreferrer">
               <img src={linkedinIcon} alt="LinkedIn" className="cursor-pointer" />
             </a>
             <a href="https://www.instagram.com/myqrmenu_?igsh=MXFxYmgzOTA4M3h6ag%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
               <img src={instagramIcon} alt="Instagram" className="cursor-pointer" />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://x.com/my_qrmenu?s=21&t=ZJ0L0preUgor2EwXJzh7jg" target="_blank" rel="noopener noreferrer">
               <img src={twitterIcon} alt="Twitter" className="cursor-pointer" />
             </a>
           </div>

@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: nextjs-app
+    plan: free
+    runtime: node
+    repo: https://github.com/myQRMenu/waitlist
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production

@@ -29,6 +29,7 @@ export default function ContactUs() {
           {/* Left Side - Map */}
           <div className="overflow-hidden rounded-xl shadow-lg">
             <iframe
+              title='location map'
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2643.0508352033503!2d-0.1373624617803413!3d51.50425124663128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b28e2e69f1f%3A0x5e7ff2721f6f9b33!2sLondon%2C%20United%20Kingdom!5e0!3m2!1sen!2sus!4v1640580873409!5m2!1sen!2sus"
               width="100%"
               height="400"
@@ -105,7 +106,7 @@ export default function ContactUs() {
                 />
                 <span className="text-sm text-gray-600">
                   You agree to our friendly{" "}
-                  <a href="#" className="text-orange-500 underline hover:text-orange-600">
+                  <a href="https://myqrmenu.co" className="text-orange-500 underline hover:text-orange-600">
                     privacy policy
                   </a>
                 </span>

@@ -14,7 +14,6 @@ import icon7 from './assets/icon7.png';
 import icon8 from './assets/icon8.png';
 import FAQSection from "./faq";
 import FooterCTA from "./footer";
-import ContactUs from "./components/contact.js";
 
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

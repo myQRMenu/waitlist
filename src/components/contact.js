@@ -1,27 +1,38 @@
-
 export default function ContactUs() {
   const onSubmit = async (event) => {
     event.preventDefault();
     const form = event.target;
     const formData = new FormData(form);
 
-    const accessKey = process.env.REACT_APP_ACCESS_KEY;
+    const checkbox = form.querySelector("#consent");
+    if (!checkbox.checked) {
+      alert("Please agree to the privacy policy before submitting.");
+      return;
+    }
 
-    formData.append("access_key",accessKey );
+    const accessKey = process.env.REACT_APP_ACCESS_KEY;
+    formData.append("access_key", accessKey);
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: json,
-    }).then((res) => res.json());
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
+      }).then((res) => res.json());
 
-    if (res.success) {
-      form.reset();
+      if (res.success) {
+        alert("Message sent successfully!");
+        form.reset();
+      } else {
+        alert("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      alert("Something went wrong. Please try again later.");
     }
   };
 
@@ -59,6 +70,7 @@ export default function ContactUs() {
                   type="text"
                   placeholder="First name"
                   className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-orange-400 focus:border-orange-400 transition"
+                  required
                 />
               </div>
               <div>
@@ -70,6 +82,7 @@ export default function ContactUs() {
                   type="text"
                   placeholder="Last name"
                   className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-orange-400 focus:border-orange-400 transition"
+                  required
                 />
               </div>
             </div>
@@ -83,6 +96,7 @@ export default function ContactUs() {
                 type="email"
                 placeholder="you@company.com"
                 className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-orange-400 focus:border-orange-400 transition"
+                required
               />
             </div>
 
@@ -95,12 +109,14 @@ export default function ContactUs() {
                 placeholder="Write your message..."
                 rows="4"
                 className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-orange-400 focus:border-orange-400 transition"
+                required
               ></textarea>
             </div>
 
             {/* Privacy and Consent */}
             <div className="flex items-center gap-2">
               <input
+                id="consent"
                 type="checkbox"
                 className="h-4 w-4 text-orange-500 border-gray-300 rounded focus:ring-orange-400"
               />

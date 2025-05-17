@@ -1,43 +1,72 @@
+import { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
+
 export default function ContactUs() {
+  const [agree, setAgree] = useState(false);
+
   const onSubmit = async (event) => {
     event.preventDefault();
     const form = event.target;
-    const formData = new FormData(form);
 
-    const checkbox = form.querySelector("#consent");
-    if (!checkbox.checked) {
-      alert("Please agree to the privacy policy before submitting.");
+    if (!agree) {
+      toast.error("You must agree to the privacy policy.");
       return;
     }
 
+    const formData = new FormData(form);
     const accessKey = process.env.REACT_APP_ACCESS_KEY;
+
     formData.append("access_key", accessKey);
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 
+    toast.loading("Submitting message...");
+
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
         body: json,
-      }).then((res) => res.json());
+      });
+      const res = await response.json();
+
+      toast.dismiss();
 
       if (res.success) {
-        alert("Message sent successfully!");
+        toast.success("Message sent successfully!");
         form.reset();
+        setAgree(false);
       } else {
-        alert("Failed to send message. Please try again.");
+        toast.error("Failed to send message. Please try again.");
       }
     } catch (error) {
-      alert("Something went wrong. Please try again later.");
+      toast.dismiss();
+      toast.error("An error occurred. Please check your connection.");
     }
   };
 
   return (
     <section className="py-16 bg-gray-50">
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          style: {
+            fontSize: "1.1rem",
+            padding: "18px 24px",
+            border: "2px solid #FF9E0C",
+            background: "#fff",
+            color: "#333",
+          },
+          iconTheme: {
+            primary: "#FF9E0C",
+            secondary: "#fff",
+          },
+          duration: 5000,
+        }}
+      />
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-6 md:px-12">
         {/* Left Side - Map */}
         <div className="overflow-hidden rounded-xl shadow-lg">
@@ -116,8 +145,9 @@ export default function ContactUs() {
             {/* Privacy and Consent */}
             <div className="flex items-center gap-2">
               <input
-                id="consent"
                 type="checkbox"
+                checked={agree}
+                onChange={(e) => setAgree(e.target.checked)}
                 className="h-4 w-4 text-orange-500 border-gray-300 rounded focus:ring-orange-400"
               />
               <span className="text-sm text-gray-600">

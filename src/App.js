@@ -149,6 +149,7 @@ function App() {
       {/* Hero Section */}
       <main className="bg-white px-2 md:px-4">
         <section
+          id="home"
           className="bg-gray-900 text-center pt-20 md:pt-28 rounded-3xl shadow-lg overflow-hidden"
           style={{
             backgroundImage: `url(${bg})`,
@@ -322,7 +323,7 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section className="py-12 bg-white">
+      <section id="aboutus" className="py-12 bg-white">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <h2 className="text-3xl font-semibold text-gray-800 text-center">
             About My QR Menu

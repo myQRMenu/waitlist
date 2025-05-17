@@ -1,4 +1,7 @@
-import logo from './assets/logo1.png';
+import facebookIcon from '../src/assets/facebookLogo.svg';
+import linkedinIcon from '../src/assets/linkedinIcon (2).svg';
+import instagramIcon from '../src/assets/instagramLogo.svg';
+import twitterIcon from '../src/assets/twitterIcon (2).svg';
 
 export default function FooterCTA() {
   return (
@@ -22,12 +25,23 @@ export default function FooterCTA() {
         </div>
 
         {/* Logo */}
-        <div className="mt-8 flex items-center justify-center gap-2">
-          <img
-            src={logo}
-            alt="QR Menu"
-            className="h-8 w-30"
-          /> 
+        <div className="mt-8 flex flex-col items-center justify-center gap-4">
+          <p classNmae="text-white text-[21px]">Connect with us</p>
+          <div className="flex flex-row gap-4">
+            <a href="https://www.facebook.com/share/1Z7nz5uFmK/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+              <img src={facebookIcon} alt="Facebook" className="cursor-pointer" />
+            </a>
+            <a href="https://www.linkedin.com/company/my-qrmenu/" target="_blank" rel="noopener noreferrer">
+              <img src={linkedinIcon} alt="LinkedIn" className="cursor-pointer" />
+            </a>
+            <a href="https://www.instagram.com/myqrmenu_?igsh=MXFxYmgzOTA4M3h6ag%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+              <img src={instagramIcon} alt="Instagram" className="cursor-pointer" />
+            </a>
+            <a href="https://x.com/my_qrmenu?s=21&t=ZJ0L0preUgor2EwXJzh7jg" target="_blank" rel="noopener noreferrer">
+              <img src={twitterIcon} alt="Twitter" className="cursor-pointer" />
+            </a>
+          </div>
+          
         </div>
 
         {/* Bottom Links */}

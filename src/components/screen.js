@@ -30,6 +30,8 @@ function ScreenContainer({ children }) {
             <header className="bg-white shadow">
                 <nav className="max-w-7xl mx-auto flex items-center px-6 py-4">
                     <Link
+                        target="_blank"
+                        rel="noopener noreferrer"
                         to="/">
                         <img src={logo} alt="QR Menu" className="h-10" />
                     </Link>

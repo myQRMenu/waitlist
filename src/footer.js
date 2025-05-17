@@ -49,6 +49,8 @@ export default function FooterCTA() {
         <div className="mt-12 w-full flex justify-between items-center text-gray-400 text-sm">
           <label className="hover:text-white transition">
             <Link
+              target="_blank"
+              rel="noopener noreferrer"
               to="/terms-and-conditions"
               className="text-orange-500 underline hover:text-orange-600"
             >
@@ -58,6 +60,8 @@ export default function FooterCTA() {
           <span>©2025 All rights reserved</span>
           <label className="hover:text-white transition">
             <Link
+              target="_blank"
+              rel="noopener noreferrer"
               to="/privacy-policy"
               className="text-orange-500 underline hover:text-orange-600"
             >

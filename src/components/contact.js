@@ -155,6 +155,8 @@ export default function ContactUs() {
               <span className="text-sm text-gray-600">
                 You agree to our friendly{" "}
                 <Link
+                 target="_blank"
+                 rel="noopener noreferrer"
                   to="/privacy-policy"
                   className="text-orange-500 underline hover:text-orange-600"
                 >

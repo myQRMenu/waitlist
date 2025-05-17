@@ -2,6 +2,7 @@ import facebookIcon from '../src/assets/facebookLogo.svg';
 import linkedinIcon from '../src/assets/linkedinIcon (2).svg';
 import instagramIcon from '../src/assets/instagramLogo.svg';
 import twitterIcon from '../src/assets/twitterIcon (2).svg';
+import { Link } from "react-router-dom";
 
 export default function FooterCTA() {
   return (
@@ -41,17 +42,27 @@ export default function FooterCTA() {
               <img src={twitterIcon} alt="Twitter" className="cursor-pointer" />
             </a>
           </div>
-          
+
         </div>
 
         {/* Bottom Links */}
         <div className="mt-12 w-full flex justify-between items-center text-gray-400 text-sm">
           <label className="hover:text-white transition">
-            Terms & Agreements
+            <Link
+              to="/terms-and-conditions"
+              className="text-orange-500 underline hover:text-orange-600"
+            >
+              Terms & Agreements
+            </Link>
           </label>
           <span>©2025 All rights reserved</span>
           <label className="hover:text-white transition">
-            Privacy Policy
+            <Link
+              to="/privacy-policy"
+              className="text-orange-500 underline hover:text-orange-600"
+            >
+              Privacy policy
+            </Link>
           </label>
         </div>
       </div>

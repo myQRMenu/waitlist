@@ -1,5 +1,7 @@
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import { Link } from "react-router-dom";
+
 
 export default function ContactUs() {
   const [agree, setAgree] = useState(false);
@@ -152,12 +154,12 @@ export default function ContactUs() {
               />
               <span className="text-sm text-gray-600">
                 You agree to our friendly{" "}
-                <a
-                  href="https://myqrmenu.co"
+                <Link
+                  to="/privacy-policy"
                   className="text-orange-500 underline hover:text-orange-600"
                 >
                   privacy policy
-                </a>
+                </Link>
               </span>
             </div>
 

@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 function ScreenContainer({ children }) {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [activeLink, setActiveLink] = useState("Home");
-    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 600);
+    const [, setIsSmallScreen] = useState(window.innerWidth < 600);
 
     useEffect(() => {
         const handleResize = () => {
